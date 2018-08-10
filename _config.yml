@@ -1,14 +1,14 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+title:          Wanderers Web
+description:    "Rubber ducking my thoughts and experiences"
+baseurl:        "/"
+url:            "https://aditya0224.github.io"
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Aditya Bhamidipati
+  url:          http://wanderersweb.com
+  email:        adityabh.in@gmail.com
 
 # Build settings
 markdown:       kramdown
