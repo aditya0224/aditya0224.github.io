@@ -15,17 +15,24 @@ How does computer understand it? Machine understands only two characters, 1 and 
 
 The use different modules to convert high-level programming instructions to machine understandable binary instructions.
 
-The complete Process can be divided into following phases:
+The complete Process can be divided into four phases:
 
 ## Preprocessor
-The source code would be concatenated which is split over multiple lines. Removes the comments. Process any escape sequences.
-File Inclusion and macro expansion and other related operations convert High level language to a pure high level language.
+Converting code from high level language to a pure high level language is done in the phase. <br />
 
-File Inclusion: Pre Processor will remove headers and include file and stich the code into this file.
-<#include>
-Macro Expansion: This would be textual transformation of the macros.
-__FILE__ Gives the filename as a string
-__LINE__ Gives the current line number (as an integer)
+Some of the actions to achieve this are <br />
+
+* Concatenate code split in multiple lines
+* Remove the comments
+* Process escape sequences,
+* File Inclusion: Remove headers and include file and stich the code into this file.
+  <br />
+  Ex: <#include> will be removed from the file and code is added to the file.
+* Macro Expansion: Textual transformation of the macros.
+  <br />
+  + \__FILE\__" replaces by filename as a string
+  + \__LINE\__ replaces by current line number (as an integer)
+ <br />
 
 ## Compiling Process:
 The process starts with cleaning of code by removing white spaces and comments and divide our program into meaningful smallest indivisible instructions called tokens. This phase is also called lexical analysis.
