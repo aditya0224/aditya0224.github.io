@@ -72,7 +72,7 @@ Since assembler is dependent on the architecture of the processor, it varies fro
 </p>
 
 ## Linking
-Assembler removes traces and links to the code and stores in the symbol table.The assembler returns a different object file for each code module without any logical relation. Linker will combine all the related modules to a single file with all the instructions understandable by the machine. Statically linking is when the machine code is completly merged into single file.
+Assembler removes traces and links to the code and stores in the symbol table.The assembler returns a different object file for each code module without any logical relation. Linker will combine all the related modules to a single file with all the instructions understandable by the machine. Static linking is when the machine code is completly merged into single file.
 
 In some instances object files are not statically linked instead provide instructions of memory location of the library to loader. This  process is often referred to dyanamic linking.
 
