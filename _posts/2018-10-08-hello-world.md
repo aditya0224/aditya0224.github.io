@@ -76,7 +76,7 @@ Assembler removes traces and links to the code and stores in the symbol table.Th
 
 In some instances object files are not statically linked instead provide instructions of memory location of the library to loader. This  process is often referred to dyanamic linking.
 
-There are libraries which can be used by multiple processors, libraries are shared instead of creating duplicate instances. These libraries are called shares objects. Generally language speicific libraries are shared.
+There are libraries which can be used by multiple processors, libraries are shared instead of creating duplicate instances. These libraries are called shared objects. Generally language speicific libraries are shared.
 
 In the last phase, loaders based on type of machine code will place them in memory,create program and data stacks and initialize. 
 Then Machine will run the instruction to "print Hello, World!".
