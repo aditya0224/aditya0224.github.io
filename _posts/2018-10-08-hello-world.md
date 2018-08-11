@@ -24,13 +24,13 @@ Some of the actions to achieve this are <br />
 
 * Concatenate code split in multiple lines
 * Remove the comments
-* Process escape sequences,
-* File Inclusion: Remove headers and include file and stich the code into this file.
+* Process escape sequences
+* File Inclusion: Remove headers and include file and stitch the code.
   <br />
   Ex: <#include> will be removed from the file and code is added to the file.
 * Macro Expansion: Textual transformation of the macros.
   <br />
-  + \__FILE\__" replaces by filename as a string
+  + \__FILE\__ replaces by filename as a string
   + \__LINE\__ replaces by current line number (as an integer)
  <br />
 
