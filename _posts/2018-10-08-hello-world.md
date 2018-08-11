@@ -37,13 +37,11 @@ Some of the actions to achieve this are <br />
 ## Compiling:
 <p>
 Compilation is a multi step process starting with lexical analysis, dividing program into meaningful smallest indivisible instructions called tokens.
-<br />
-Ex: for instriction </br>
+</p> 
 <pre>
-float newValue = 10.5; 
-
-Above instruction is converted to following tokens
-
+Ex: for the instruction
+      float newValue = 10.5;
+following tokens are generated
   {float, keyword}
   {newValue, identifier},
   {=, operator} 
@@ -51,31 +49,34 @@ Above instruction is converted to following tokens
 </pre>
 
 <p>
-If the token is not valid, it will generate compilation error. With these tokens, parse tree will be constructed. If the code does not confer to code grammar, error will be generated. After Parse tree construction, semantic analyzers perfom static analysis of code by checking type compatibility of tokens. 
+If the token is not valid, compiler will generate compilation error. Parse tree will be constructed with the tokens. Errors will be generated, if the code does not confer to code grammar. After parse tree construction, semantic analyzers perfom static analysis of code by checking type compatibility of tokens. 
 </p>
 <p>
-In the next steps machine independent _intermediate code_ is generated. Intermediate code is the data structure used internally by a compiler to represent source code. Intermediate code is optimal to generate machine code in next phases.
+In the next steps machine independent intermediate code is generated. Intermediate code is the data structure used internally by a compiler to represent source code. Intermediate code is optimal to generate machine code in next phases.
 </p>
 <p>
 In the compilation process data and tokens are stored in memory called symbol table. We access symbol table whenever a specific value is required in the complication process. 
 </p>
-<br/>
 
 ## Assembly process
-<p>
+
 Machine Code is specialized instructions specific to the machine architecture. Assemblers will transform the assembly code to machine code optimized to harwarde architecture.
-</p>
-There are two types of machine codes 
+
+There are two types of machine codes
 * Relocatable machine code
-  + Relocatable Machine code is not dependent on the location of the memory where the program starts.
+  + Relocatable Machine code is not dependent on the memory location of program start.
 * Absolute Machine Code
-  + Absolute Machine code is dependent on the memory location.
+  + Absolute Machine code is dependent on the memory location of the program start.
 <p>
 Since assembler is dependent on the architecture of the processor, it varies from machine to machine.
 </p>
 
 ## Linking
-Each compiler returns a different object file for each code module. Linker will combine all the related modules to a another single file.
+Assembler removes the all the traces and links to the code and stores in the symbol table. 
+The assembler returns a different object file for each code module without any logical relation. Linker will combine all the related modules to a another single file with all the instructions understandable by the machine.
+linking done in this process is called statically linked. In other instances all the modules are combined instead provide the instructions of the location of the library to loader. This is called Dyanamic linking.
+
+There are libraries which can be used my multiple processors, libraries are shared instead of creating duplicate instances. These libraries are called shares objects. Generally language speicific libraries are shared.
 
 In the last phase, loaders based on type of machine code will place them in memory,create program and data stacks and initialize. 
 Then Machine will run the instruction to "print Hello, World!".
