@@ -35,21 +35,39 @@ Some of the actions to achieve this are <br />
  <br />
 
 ## Compiling:
-The process starts with cleaning of code by removing white spaces and comments and divide our program into meaningful smallest indivisible instructions called tokens. This phase is also called lexical analysis.
+<br />
+<p>
+Compilation is a multi step process starting with lexical analysis, dividing program into meaningful smallest indivisible instructions called tokens.
+<br />
+Ex: for instriction </br>
+<pre>
+float newValue = 10.5; 
+</pre> 
+following tokens are generated 
++ {float, keyword}
++ {newValue, identifier},
++ {=, operator} 
++ {10.5, constant}, {;, symbol}
 
-Ex: float newValue = 10.5; following tokens are generated {float, keyword}, {newValue, identifier}, {=, operator} , {10.5, constant}, {;, symbol}
+If the token is not valid, it will generate compilation error. With these tokens, parse tree will be constructed. If the code does not confer to code grammar, error will be generated. After Parse tree construction, semantic analyzers perfom static analysis of code by checking type compatibility of tokens. 
+<p />
 
-If the token is not valid, it will generate error. With the token from the Scanning step, a parse tree will be constructed. If the code does not confer to code grammar, error will be generated. After Parsing, Semantic analyzers check if the types are compatible. This is the phase of static analysis of code. In the next Steps Intermediate Code is Generated which is machine Independent. Some optimization like, Shortcircuit operations will be performed. Intermediate code will be optimal to generate the machine level code to the target machine. Then Machine Code, specialized instructions specific to the machine architecture is generated and optimized to Specific hardware.
+<p>
+In the next steps machine independent _intermediate code_ is generated. Intermediate code is the data structure used internally by a compiler to represent source code. Intermediate code is optimal to generate machine code in next phases.
+</p>
 
 In the compilation process data and tokens are stored in memory called symbol table. We access symbol table whenever a specific value is required in the complication process. 
 
-In Interpreters, we does it few of these steps for each instruction or line of code instead of the whole code. We do scanning, parsing and generating and optimizing machine level instruction and executing it. We skip the steps of generating and optimizing intermediate code.
-
-## assembly process
-In this phase the assembly language is converted into machine code. 
-There are two types of machine codes Relocatable machine code and Absolute Machine Code
-Relocatable Machine code is not dependent on the location of the memory where the program starts. Where as Absolute Machine code is dependent on the memory location.
-This module is dependent on the architecture of the processor. So, the assembler varies from machine to machine.
+## Assembly process
+<br />
+Machine Code is specialized instructions specific to the machine architecture. Assemblers will transform the assembly code to machine code optimized to harwarde architecture.
+There are two types of machine codes 
+* Relocatable machine code
+  + Relocatable Machine code is not dependent on the location of the memory where the program starts.
+* Absolute Machine Code
+  + Absolute Machine code is dependent on the memory location.
+  
+Since assembler is dependent on the architecture of the processor, it varies from machine to machine.
 
 Input: Assembly Level Language
 Output: Machine Code [0/1]
@@ -57,5 +75,5 @@ Output: Machine Code [0/1]
 ## Linking
 Each compiler returns a different object file for each code module. Linker will combine all the related modules to a another single file.
 
-In the last phase, loaders based on type of machine code will place them in memory,create program and data stacks and initialized. 
+In the last phase, loaders based on type of machine code will place them in memory,create program and data stacks and initialize. 
 Then Machine will run the instruction to "print Hello, World!".
