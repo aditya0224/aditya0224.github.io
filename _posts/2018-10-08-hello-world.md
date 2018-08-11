@@ -35,7 +35,6 @@ Some of the actions to achieve this are <br />
  <br />
 
 ## Compiling:
-<br />
 <p>
 Compilation is a multi step process starting with lexical analysis, dividing program into meaningful smallest indivisible instructions called tokens.
 <br />
@@ -50,27 +49,30 @@ following tokens are generated
 + {10.5, constant}, {;, symbol}
 
 If the token is not valid, it will generate compilation error. With these tokens, parse tree will be constructed. If the code does not confer to code grammar, error will be generated. After Parse tree construction, semantic analyzers perfom static analysis of code by checking type compatibility of tokens. 
-<p />
+</p>
 
 <p>
 In the next steps machine independent _intermediate code_ is generated. Intermediate code is the data structure used internally by a compiler to represent source code. Intermediate code is optimal to generate machine code in next phases.
 </p>
-
+<p>
 In the compilation process data and tokens are stored in memory called symbol table. We access symbol table whenever a specific value is required in the complication process. 
-
+</p>
+<br/>
 ## Assembly process
-<br />
+<p>
 Machine Code is specialized instructions specific to the machine architecture. Assemblers will transform the assembly code to machine code optimized to harwarde architecture.
 There are two types of machine codes 
 * Relocatable machine code
   + Relocatable Machine code is not dependent on the location of the memory where the program starts.
 * Absolute Machine Code
   + Absolute Machine code is dependent on the memory location.
-  
+  </p>
+<p>
 Since assembler is dependent on the architecture of the processor, it varies from machine to machine.
 
 Input: Assembly Level Language
 Output: Machine Code [0/1]
+</p>
 
 ## Linking
 Each compiler returns a different object file for each code module. Linker will combine all the related modules to a another single file.
