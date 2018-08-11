@@ -72,11 +72,11 @@ Since assembler is dependent on the architecture of the processor, it varies fro
 </p>
 
 ## Linking
-Assembler removes the all the traces and links to the code and stores in the symbol table. 
-The assembler returns a different object file for each code module without any logical relation. Linker will combine all the related modules to a another single file with all the instructions understandable by the machine.
-linking done in this process is called statically linked. In other instances all the modules are combined instead provide the instructions of the location of the library to loader. This is called Dyanamic linking.
+Assembler removes traces and links to the code and stores in the symbol table.The assembler returns a different object file for each code module without any logical relation. Linker will combine all the related modules to a single file with all the instructions understandable by the machine. Statically linking is when the machine code is completly merged into single file.
 
-There are libraries which can be used my multiple processors, libraries are shared instead of creating duplicate instances. These libraries are called shares objects. Generally language speicific libraries are shared.
+In some instances object files are not statically linked instead provide instructions of memory location of the library to loader. This  process is often referred to dyanamic linking.
+
+There are libraries which can be used by multiple processors, libraries are shared instead of creating duplicate instances. These libraries are called shares objects. Generally language speicific libraries are shared.
 
 In the last phase, loaders based on type of machine code will place them in memory,create program and data stacks and initialize. 
 Then Machine will run the instruction to "print Hello, World!".
