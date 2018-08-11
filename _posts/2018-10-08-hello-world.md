@@ -17,7 +17,7 @@ The use different modules to convert high-level programming instructions to mach
 
 The complete Process can be divided into four phases:
 
-## Preprocessor
+## Preprocessing
 Converting code from high level language to a pure high level language is done in the phase. <br />
 
 Some of the actions to achieve this are <br />
@@ -34,7 +34,7 @@ Some of the actions to achieve this are <br />
   + \__LINE\__ replaces by current line number (as an integer)
  <br />
 
-## Compiling Process:
+## Compiling:
 The process starts with cleaning of code by removing white spaces and comments and divide our program into meaningful smallest indivisible instructions called tokens. This phase is also called lexical analysis.
 
 Ex: float newValue = 10.5; following tokens are generated {float, keyword}, {newValue, identifier}, {=, operator} , {10.5, constant}, {;, symbol}
@@ -45,7 +45,7 @@ In the compilation process data and tokens are stored in memory called symbol ta
 
 In Interpreters, we does it few of these steps for each instruction or line of code instead of the whole code. We do scanning, parsing and generating and optimizing machine level instruction and executing it. We skip the steps of generating and optimizing intermediate code.
 
-## Assembler
+## assembly process
 In this phase the assembly language is converted into machine code. 
 There are two types of machine codes Relocatable machine code and Absolute Machine Code
 Relocatable Machine code is not dependent on the location of the memory where the program starts. Where as Absolute Machine code is dependent on the memory location.
@@ -54,7 +54,8 @@ This module is dependent on the architecture of the processor. So, the assembler
 Input: Assembly Level Language
 Output: Machine Code [0/1]
 
-## Loader and Linker
-Each compiler returns a different object file for each code module. Linker will combine all the related modules to a another single file.The loaders based on type of machine code will load it in the programs address space. All the program and data stack are created loaded and gets initialized. 
+## Linking
+Each compiler returns a different object file for each code module. Linker will combine all the related modules to a another single file.
 
-After all this phases, machine will get the instruction to print the instruction on the screen and prints it.
+In the last phase, loaders based on type of machine code will place them in memory,create program and data stacks and initialized. 
+Then Machine will run the instruction to "print Hello, World!".
