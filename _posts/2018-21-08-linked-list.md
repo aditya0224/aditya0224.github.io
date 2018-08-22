@@ -19,7 +19,7 @@ class ListNode(self, val):
 	self.val = val
 	self.next = next
 
-The start of the linkedlist is called head, end of the list is tail, whose next pointer points to None
+The start of the linkedlist is called head, end of the list is tail, whose next pointer points to None.
 Sentinel node is a dummy node added at the head or tail of the list to make operations easier on the list.
 
 There are three types of linkedlists
