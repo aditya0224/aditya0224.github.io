@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Linked List!"
+author: "Adi Bhamidipati"
+---
+
 Linked list is list of nodes connected by pointers. Each node stores data and pointer to next node.
 Linkedlist is a dynamic datastucture, so size can be easily increased.
 
