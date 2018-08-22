@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linked List!"
+title:  "Linked Lists in Python"
 author: "Adi Bhamidipati"
 ---
 
