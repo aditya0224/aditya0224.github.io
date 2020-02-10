@@ -5,13 +5,12 @@ author: "Adi Bhamidipati"
 ---
 
 As per Hofstadter's Law, it always takes longer than we expected to implement any development feature. 
-Bugs are by product of code. The number of lines of code and bugs are directly proportional.
+Bugs are by product of code. On the lighter note, number of lines of code is directly proportional to number of bugs.
 So, debugging is one of the essential skills every developer will have. The more knowledge about the local variables and
 flow of the control, easy to triage bugs and fix them.
 
-Node.js has become one of the popular language since it is proved efficient in highly scalable data intensive 
-and real time apps. Learning node.js development with novice knowledge in javascript, the first I learned is debugging.
-
+Javascript is one of the popular languages, node.js proved efficient in highly scalable data intensive 
+and real time apps. Learning node.js development with novice knowledge in javascript, the first thing I learned is debugging.
 Here are the three techniques to debug a node application:
 
 #### Log to console:
@@ -33,8 +32,8 @@ Throw Error(“This is a wanderers web debug post !”);
 
 #### Debug with ide:
 
-Third way to debug is with break points in your ide. One of the popular ide for javascript visual studio code. 
-We need to add a launch.json with the similar configuration.
+Third way to debug is with break points in your ide. One of the popular ide for javascript is visual studio code. 
+We need to add a launch.json at root of your node.js application with this configuration.
 
 {% highlight markdown %}
 {
