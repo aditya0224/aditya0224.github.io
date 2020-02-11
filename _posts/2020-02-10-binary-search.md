@@ -19,7 +19,7 @@ Basic Implementation of Binary Search [In python]:
 
 #### Implementation:
 
-{% markdown highlight%}
+{% highlight markdown %}
 Class BinarySearch:
 def search(target: int,nums:List):
 low = 0
@@ -41,7 +41,7 @@ finding square root.
 
 Lets write to use this search technique to find the square root of a number:
 
-{% markdown highlight%}
+{% highlight markdown %}
 def sqrt(number: int):
 low = 0
 high = number // 2
