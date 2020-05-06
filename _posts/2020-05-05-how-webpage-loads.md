@@ -51,4 +51,3 @@ Typically browser display html content and do get requests to get additional ass
 
 * What is traceroute?
 > Utility to track the network path from source to desitnation resource and record time for each step
-{% endhighlight%}
