@@ -27,3 +27,5 @@ There are three types of faults
  3. Tests, unit, integration and automation tests
  4. Roll back for bad deployments etc
  5. Monitoring for errors
+
+Reliability is something important from critical application to any web page, since users are important and we don't give them bad impression or data.
